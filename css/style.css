@@ -1,0 +1,740 @@
+/*======================================
+
+        Default Values
+
+Fonts: Lato
+
+Colors:
+1. Orange: #F79041;
+2. Dark Gray: #fff;
+3. Gray: #ccc;
+4. White: #fff;
+
+======================================*/
+
+
+
+/*------------------------------
+        Basic setup
+------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+
+/*------------------------------
+            Header
+------------------------------*/
+
+.start-menu {
+    position: fixed;
+    height: 100vh;
+    width: 60px;
+    background-color: #222;
+    transition: all .5s;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 1px 5px 15px #000;
+}
+
+.menu-closed {
+    position: absolute;
+    top: 30px;
+}
+
+.menu-closed i {
+    color: #ccc;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-social {
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.menu-social a {
+    display: flex;
+    color: #ccc;
+    margin-right: 50px;
+    align-items: center;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.menu-social a:hover {
+    color: #F79041;
+}
+
+.menu-social a i {
+    margin-right: 5px;
+}
+
+/* Navigation Menu */
+.main-nav {
+    position: fixed;
+    height: 100vh;
+    background-color: #222;
+    transition: all .5s;
+    z-index: 1000;
+    left: -600px;
+    width: 600px;
+    display: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 5px 15px #000;
+    background-image: url(../img/carsLogo.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.icon-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #ccc;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.button-anim {
+    animation: buttonAnim .3s forwards ease-in;
+    animation-delay: .15s
+}
+
+@keyframes buttonAnim {
+    0% {
+        left: -10px
+    }
+    30% {
+        left: 1px
+    }
+    100% {
+        left: -100px
+    }
+}
+
+.button-anim-close {
+    animation: buttonAnimClose .3s forwards ease-in;
+    animation-delay: .6s
+}
+
+@keyframes buttonAnimClose {
+    from {
+        left: -100px
+    }
+    to {
+        left: 0
+    }
+}
+
+.nav-content {
+    padding: 80px 0;
+    margin-left: 14px
+}
+
+.nav-content img {
+    cursor: pointer;
+    margin-bottom: 60px
+}
+
+.nav-anim {
+    animation: navAnim .5s forwards linear;
+    display: flex;
+    animation-delay: .5s
+}
+
+@keyframes navAnim {
+    from {
+        left: -600px
+    }
+    to {
+        left: 0
+    }
+}
+
+.nav-anim-close {
+    animation: navAnimClose .7s forwards linear;
+    display: flex
+}
+
+@keyframes navAnimClose {
+    0% {
+        left: 0
+    }
+    30% {
+        left: 2px
+    }
+    100% {
+        left: -600px
+    }
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu a {
+    color: #ccc;
+    margin: 20px;
+    font-size: 30px;
+    transition: all .3s ease;
+}
+
+.nav-menu a:hover {
+    color: #F79041;
+}
+
+.main-nav h2 {
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    color: #ccc;
+    font-size: 35px;
+    font-weight: 400;    
+}
+
+/*------------------------------
+        Heading section
+------------------------------*/
+.heading-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #222;
+}
+
+.heading-section img {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%, -50%);
+    z-index: 100;
+    max-width: 1000px;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.left-heading {
+    background-color: #222;
+    flex: 1;
+}
+
+.right-heading {
+    flex: 2;
+    background-color: #F79041;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.heading-text {
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    margin-left: 150px;
+    height: 100vh;
+}
+
+.heading-text h1 {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 65px;
+}
+
+.heading-text h1 span {
+    color: #F79041;
+}
+
+.heading-text h2 {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 17px;
+}
+
+.heading-text div {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 60px 0
+}
+
+.heading-text h2:nth-child(4) {
+    color: #F79041;
+    font-size: 30px;
+}
+
+.heading-text h3 {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.heading-text a {
+    margin-top: 40px;
+    color: #ccc;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+.heading-text a:hover {
+    background-color: #F79041;
+    color: #222;
+    border-color: #222;
+}
+
+
+
+/*------------------------------
+         About section
+------------------------------*/
+
+.about-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F79041;
+    position: relative;
+}
+
+.about-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ccc;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 15px 35px #000;
+    display: flex;
+    align-items: center;
+}
+
+.about-content div {
+    flex: 1;
+}
+
+.about-content div h2,
+.about-content div p {
+    width: 70%;
+    margin: auto;
+    color: #222;
+}
+
+.about-content div h2 {
+    font-weight: 900;
+    font-size: 55px;
+    letter-spacing: 2px;
+}
+
+.about-content div p {
+    font-size: 18px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+
+.about-content div h2 span {
+    color: #F79041;
+}
+
+.about-content div img {
+    width: 85%;
+}
+
+.left-about {
+    flex: 1;
+    background-color: #222;
+    height: 100%;
+    clip-path: polygon(0 0, 66.66% 0, 0 100%, 0% 100%);
+}
+
+.right-about {
+    flex: 1;
+    background-color: #F79041;
+    height: 100%;
+}
+
+
+
+
+/*------------------------------
+         Offers section
+------------------------------*/
+.offers-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+.offers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.offers-heading h2 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+    color: #222;
+    letter-spacing: 2px;
+    line-height: 65px;
+}
+
+.offers-heading h2 span {
+    color: #F79041;
+    font-size: 80px;
+}
+
+.offers-section .pricing {
+    width: 20%;
+    background-color: #222;
+    height: 60%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 15px 35px #000;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.offers-section .pricing:hover {
+    box-shadow: 1px 25px 55px #F79041;
+}
+
+.offers-section .pricing:nth-child(2) {
+    background-color: #F79041;
+    margin-top: -50px;
+}
+
+.pricing h3 {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pricing p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+.pricing p:last-child {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+.pricing p span {
+    font-size: 30px;
+    vertical-align: text-top;
+    color: #F79041;
+}
+
+.pricing:nth-child(2) p:last-child span {
+    color: #222;
+}
+
+
+
+/*------------------------------
+         Gallery section
+------------------------------*/
+.gallery-section {
+    height: 480h;
+    background-color: #F79041;
+    padding-left: 60px;
+}
+
+.cars-gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-start;
+}
+
+.cars-gallery div {
+    width: 30%;
+    margin: 0 20px; 
+}
+
+.cars-gallery div img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.portfolio-filter {
+    padding: 30px 0;
+    text-align: center;    
+}
+
+.button {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.button.active {
+    color: #222;
+}
+
+
+
+/*------------------------------
+         Contact section
+------------------------------*/
+.contact-section {
+    height: 100vh;
+    display: flex;
+    background-color: #222;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    width: 70%;
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 1px 15px 35px #000;
+}
+
+.contact-left {
+    flex: 1;
+    background-color: #fff;
+    padding: 60px;
+}
+
+.contact-left h2 {
+    color: #222;
+}
+
+.contact-left>p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #222;
+    margin-bottom: 80px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.contact-info i {
+    padding: 15px;
+    color: #222;
+    font-size: 27px;
+}
+
+.contact-info p {
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #222;
+}
+
+/* right side */
+.contact-right {
+    flex: 1;
+    background-color: #F79041;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 38%, 4% 35%, 0 32%, 0 0);
+}
+
+.contact-right form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+.contact-right form input::placeholder {
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.contact-right input {
+    width: 80%;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;    
+    padding: 15px;
+    color: #fff;
+    font-size: 17px;
+    margin: 25px;
+}
+
+.contact-right input:focus {
+    outline: none;
+}
+
+.contact-right textarea {
+    background-color: transparent;
+    width: 80%;
+    resize: none;
+    height: 200px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;  
+    padding: 15px;
+    margin: 25px;
+    color: #fff;
+}
+
+.contact-right textarea:focus {
+    outline: none;
+}
+
+.contact-right textarea::placeholder {
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.contact-right button {
+    width: 200px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;  
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin: 20px;
+}
+
+.contact-right button i {
+    padding-left: 10px;
+}
+
+.contact-right button:hover {
+    background-color: #222;
+    border: 2px solid #222;
+}
+
+
+
+/*------------------------------
+          Preloader
+------------------------------*/
+
+.load {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 9999;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load hr{
+    width:30px;
+    height:30px;
+    position:absolute;
+    border-radius:50%;
+    animation:spin 2s ease infinite;
+}
+
+.load :first-child{background:#222;animation-delay:-1.5s}
+.load :nth-child(2){background:#F79041;animation-delay:-1s}
+.load :nth-child(3){background:#222;animation-delay:-0.5s}
+.load :last-child{background:#F79041}
+
+@keyframes spin{
+  0%,100% {
+      transform:translate(0)
+  }
+  25% {
+      transform:translate(160%)
+  }
+  50% {
+      transform:translate(160%, 160%)
+  }
+  75% {
+      transform:translate(0, 160%)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
